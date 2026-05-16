@@ -1,0 +1,347 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+@font-face {
+    font-family: "Jhordy";
+    src: url("./Jhordy.otf") format("opentype");
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+#nav {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1380px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    align-items: center;
+    border-bottom: 1px solid rgb(231, 231, 231);
+    padding-bottom: 10px;
+}
+
+
+#logo {
+    height: 100%;
+    width: auto;
+    font-weight: 800;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+#nav-icons {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+#nav-icons i:nth-child(3) {
+    padding: 10px;
+    background: #000;
+    color: white;
+    border-radius: 500px;
+    padding-inline:20px;
+}
+
+#hero {
+    max-width: 1380px;
+    padding-inline:20px;
+    margin: 0 auto;
+}
+
+#hero-top #title {
+    font-size: 50px;
+    text-align: center;
+    padding: 20px 0px;
+}
+
+#hero-t-t {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+#icon1,
+#icon2 {
+    font-size: 40px;
+    line-height: 80px;
+}
+
+#icon3 {
+    position: absolute;
+    font-size: 40px;
+    bottom: -10px;
+    left: 20%;
+}
+
+#hero-t-b {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: -20px;
+}
+
+#hero-t-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    & h4 {
+        font-size: 12px;
+    }
+
+    & h3 {
+        line-height: 26px;
+        text-transform: uppercase;
+        letter-spacing: 1.1px;
+    }
+}
+
+#hero-t-circle {
+    padding: 0px 20px;
+
+    & img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+#hero-body {
+    position: relative;
+    margin-top: -50px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    width: 100%;
+    grid-template-areas:
+        "  .      .    Card-4   .       .  "
+        "  .    Card-2 Card-4 Card-5    .  "
+        "Card-1 Card-2 Card-4 Card-5 Card-7"
+        "Card-1 Card-3 Card-4 Card-5 Card-7"
+        "Card-1 Card-3 Card-4 Card-6 Card-7"
+        "  .    Card-3 Card-4 Card-6   .   "
+        "  .      .    Card-4   .      .   "
+    ;
+    height: 600px;
+    width: 100%;
+    gap: 10px;
+    row-gap: 10px;
+    column-gap: 10px;
+
+    & div {
+        & img {
+            border-radius: 30px;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+#Card-1 {
+    grid-area: Card-1;
+    width: 100%;
+}
+
+#Card-2 {
+    grid-area: Card-2;
+}
+
+#Card-3 {
+    grid-area: Card-3;
+}
+
+#Card-4 {
+    grid-area: Card-4;
+}
+
+#star {
+    position: absolute;
+    top: -33px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px !important;
+    height: 80px !important;
+}
+
+#Card-5 {
+    grid-area: Card-5;
+}
+
+#Card-6 {
+    grid-area: Card-6;
+}
+
+#Card-7 {
+    grid-area: Card-7;
+    position: relative;
+
+    & span {
+        position: absolute;
+        bottom: -32px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 22px;
+        font-weight: 700;
+    }
+}
+
+#hero-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    padding-bottom: 30px;
+    margin-top: -180px;
+}
+
+#f-left {
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    & img {
+        width: 50px;
+    }
+
+    & p {
+        line-height: 24px;
+    }
+
+   & h3 {
+       position: relative;
+       display: inline-block;
+       font-family: "Jhordy";
+       font-size: 30px;
+       z-index: 1;
+       font-weight: 200;
+   }
+
+   & h3::after {
+       content: "";
+       position: absolute;
+        font-style: italic;
+       left: 0;
+       bottom: 8px;
+       width: 135px;
+       height: 6px;
+       background: #F4D03F;
+       z-index: -1;
+   }
+}
+
+#f-middle {
+    display: flex;
+    gap: 30px;
+
+    & button {
+        display: flex;
+        gap: 5px;
+        padding: 14px 22px;
+        border-radius: 10px;
+        border: 1px solid #ebe9e9;
+        align-items: center;
+        color: #000;
+        font-size: 10px;
+        font-weight: 600;
+        background: white;
+        text-transform: uppercase;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.07);
+
+        & i {
+            font-size: 20px;
+            font-weight: 400;
+        }
+    }
+}
+
+/* #icon4{
+    font-size: 30px;
+} */
+
+#f-right {
+    display: flex;
+    align-items: flex-end;
+    gap: 40px;
+    margin-bottom: 1%;
+}
+
+#rose {
+    position: absolute;
+    width: 54px;
+    top: 0;
+    right: 5%;
+}
+
+#blog-content {
+    display: flex;
+    gap: 20px;
+    align-items: end;
+}
+
+#blog-content span {
+    font-size: 12px;
+}
+
+#blog-info {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 0px;
+}
+
+#blog-content h1 {
+    font-size: 42px;
+    font-weight: 400;
+}
+
+#blog-info h2 {
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+#arrow-btn {
+    width: 72px;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 50%;
+
+    background: #000;
+    color: white;
+
+    font-size: 28px;
+    cursor: pointer;
+}
+
+#blog-right {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 50px;
+}
+
+#arrow-btn img {
+    width: 24px;
+    filter: brightness(0) invert(1);
+}
+
+#rose {
+    position: relative;
+    font-size: 50px;
+}
